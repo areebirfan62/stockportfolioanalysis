@@ -1,0 +1,13 @@
+numpy
+pandas
+matplotlib
+seaborn
+yfinance
+pyomo
+scipy
+xgboost
+scikit-learn
+plotly
+nbconvert
+ipykernel
+tabulate

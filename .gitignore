@@ -1,0 +1,9 @@
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+.env
+*.pyc
+*.log
+*.tmp
+patch_*.py
+run_*_smoke.py
