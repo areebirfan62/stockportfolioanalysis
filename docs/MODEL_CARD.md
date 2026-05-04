@@ -48,7 +48,7 @@ Both Model 1 and Model 2 passed these hard constraints in the latest run.
 
 ## Reporting
 
-The repository publishes an interactive dashboard from `docs/index.html`. The dashboard is generated from the latest CSV outputs and summarizes portfolio value, daily returns, sector allocation, stock-level weights, return contribution, and allocation history.
+The repository publishes an interactive dashboard from `docs/index.html`. The dashboard is generated from the latest CSV outputs and summarizes portfolio value, summary statistics, daily returns, sector allocation, stock-level weights, return contribution, and allocation history.
 
 ## Known Limitations
 

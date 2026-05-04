@@ -227,6 +227,18 @@ def build_holdings_table(latest: pd.DataFrame) -> str:
     return "\n".join(rows)
 
 
+def build_summary_stats_table(stats: dict[str, str]) -> str:
+    rows = []
+    for label, value in stats.items():
+        rows.append(
+            "<tr>"
+            f"<td>{label}</td>"
+            f"<td>{value}</td>"
+            "</tr>"
+        )
+    return "\n".join(rows)
+
+
 def metric_card(label: str, value: str, detail: str = "") -> str:
     detail_html = f"<span>{detail}</span>" if detail else ""
     return f"""
@@ -254,6 +266,26 @@ def render_dashboard(summary: pd.DataFrame, latest: pd.DataFrame, forward: pd.Da
     rebalance_days = int(summary["Date"].nunique())
     latest_return = safe_float(latest_row["Portfolio_Return"])
     latest_solver = latest["Solver"].mode().iloc[0] if "Solver" in latest and not latest["Solver"].empty else "recorded"
+    total_weight = safe_float(latest["Weight"].sum())
+    summary_stats = {
+        "Latest trade date": latest_date.strftime("%B %d, %Y"),
+        "Forward-test sessions": f"{rebalance_days}",
+        "Starting wealth": money(STARTING_WEALTH),
+        "Portfolio value": money(latest_value),
+        "Wealth gain": money(wealth_gain),
+        "Cumulative return": pct(cumulative_return),
+        "Average daily return": pct(avg_daily_return),
+        "Daily volatility": pct(daily_vol),
+        "Annualized Sharpe": "N/A" if np.isnan(sharpe) else f"{sharpe:.2f}",
+        "Maximum drawdown": pct(max_drawdown),
+        "Win rate": pct(win_rate),
+        "Current holdings": f"{len(latest)}",
+        "Total portfolio weight": pct(total_weight),
+        "Sector coverage": f"{sector_count} sectors",
+        "Allocation rule": "Exactly 2 stocks from each of 5 sectors",
+        "Weight bounds": "5% minimum and 50% maximum per selected stock",
+        "Latest solver": str(latest_solver),
+    }
 
     figs = [
         build_value_chart(summary),
@@ -333,6 +365,11 @@ def render_dashboard(summary: pd.DataFrame, latest: pd.DataFrame, forward: pd.Da
       background: rgba(255,255,255,.04);
       border-radius: 6px;
       font-weight: 650;
+    }}
+    nav a.primary-link {{
+      color: #06101f;
+      border-color: var(--cyan);
+      background: var(--cyan);
     }}
     main {{
       width: min(1460px, 100%);
@@ -422,6 +459,16 @@ def render_dashboard(summary: pd.DataFrame, latest: pd.DataFrame, forward: pd.Da
       text-transform: uppercase;
       background: #0e182a;
     }}
+    .summary-table td:first-child {{
+      color: var(--muted);
+      font-weight: 700;
+      letter-spacing: .02em;
+      text-transform: uppercase;
+    }}
+    .summary-table td:last-child {{
+      color: var(--text);
+      font-weight: 750;
+    }}
     .section-title {{
       margin: 32px 0 14px;
       font-size: 22px;
@@ -453,7 +500,8 @@ def render_dashboard(summary: pd.DataFrame, latest: pd.DataFrame, forward: pd.Da
       enforces a 5% minimum and 50% maximum position size, and holds exactly 2 stocks from each of 5 sectors.
     </p>
     <nav>
-      <a href="{COLAB_URL}">Open Colab Workbook</a>
+      <a class="primary-link" href="{COLAB_URL}">Powered by Colab</a>
+      <a href="#summary-statistics">Summary Statistics</a>
       <a href="{REPO_URL}/blob/main/reports/latest_summary.md">Latest Summary</a>
       <a href="{REPO_URL}/blob/main/data/latest_portfolio_holdings.csv">Holdings CSV</a>
       <a href="{REPO_URL}/blob/main/data/portfolio_daily_summary.csv">Daily Results CSV</a>
@@ -471,9 +519,18 @@ def render_dashboard(summary: pd.DataFrame, latest: pd.DataFrame, forward: pd.Da
     </section>
 
     <section class="notes">
-      <div class="note"><strong>Optimization logic</strong>The notebook uses binary selection variables and continuous allocation variables to connect stock selection with capital weighting.</div>
+      <div class="note"><strong>Colab workbook</strong>The project is powered by a Google Colab workbook that refreshes data, runs the optimization models, and writes the daily output files used by this dashboard.</div>
       <div class="note"><strong>Hard constraints</strong>Every daily allocation must sum to 100%, select exactly 10 stocks, keep each selected name between 5% and 50%, and include exactly 2 stocks per sector.</div>
       <div class="note"><strong>Automation</strong>GitHub Actions runs the workbook at 3:45 PM Eastern on market weekdays, refreshes Yahoo Finance data, validates the constraints, and republishes this dashboard.</div>
+    </section>
+
+    <h2 id="summary-statistics" class="section-title">Summary Statistics</h2>
+    <section class="panel">
+      <table class="summary-table">
+        <tbody>
+          {build_summary_stats_table(summary_stats)}
+        </tbody>
+      </table>
     </section>
 
     <section class="grid">

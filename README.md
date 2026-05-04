@@ -4,11 +4,13 @@
 
 This project builds a daily active portfolio allocation system for OPIM 5641 Business Decision Modeling. The model uses Modern Portfolio Theory, integer selection variables, sector diversification rules, moving-average signals, and an XGBoost overlay to decide which 10 stocks to hold and how much capital to allocate to each position.
 
-[Interactive Dashboard](https://areebirfan62.github.io/stockportfolioanalysis/) | [Colab Workbook](https://colab.research.google.com/drive/1Jc1ZjkHwNA_sHCkSf6gUSaJnZ2IuZp2w#scrollTo=part0_header) | [Latest Summary](reports/latest_summary.md) | [Model Card](docs/MODEL_CARD.md)
+[Interactive Dashboard](https://areebirfan62.github.io/stockportfolioanalysis/) | [Powered by Colab](https://colab.research.google.com/drive/1Jc1ZjkHwNA_sHCkSf6gUSaJnZ2IuZp2w#scrollTo=part0_header) | [Summary Statistics](reports/latest_summary.md) | [Model Card](docs/MODEL_CARD.md)
 
 ## Executive Summary
 
 The portfolio is evaluated as a forward test beginning on April 21, 2026. Each trading day, the workbook refreshes market data, retrains the allocation logic using only prior data, selects a constrained 10-stock portfolio, and records the next-day performance. The result is an iterative trading model rather than a one-time static backtest.
+
+The modeling workflow is powered by Google Colab for transparent notebook execution and GitHub Actions for daily publication. Colab remains the primary workbook environment, while this repository publishes the refreshed data files, validation outputs, and interactive dashboard.
 
 ## Current Forward-Test Snapshot
 
@@ -44,6 +46,7 @@ Latest generated date: **2026-05-01**
 
 The project dashboard is published from `docs/index.html` through GitHub Pages. It refreshes from the same CSV outputs produced by the workbook and includes:
 
+- Summary statistics button for the latest forward-test metrics
 - Forward-test portfolio value
 - Daily portfolio returns
 - Latest 10-stock allocation
