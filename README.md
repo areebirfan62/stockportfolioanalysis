@@ -6,6 +6,10 @@ This project builds a daily active portfolio allocation system for OPIM 5641 Bus
 
 [Interactive Dashboard](https://areebirfan62.github.io/stockportfolioanalysis/) | [Powered by Colab](https://colab.research.google.com/drive/1Jc1ZjkHwNA_sHCkSf6gUSaJnZ2IuZp2w#scrollTo=part0_header) | [Summary Statistics](reports/latest_summary.md) | [Model Card](docs/MODEL_CARD.md)
 
+## View Results
+
+The main results are published in the interactive dashboard, not in the repository file list. Use the dashboard link above to review the latest portfolio value, summary statistics, daily returns, sector allocation, and current holdings. If GitHub Pages is still being configured, the same dashboard source is stored in `docs/index.html`.
+
 ## Executive Summary
 
 The portfolio is evaluated as a forward test beginning on April 21, 2026. Each trading day, the workbook refreshes market data, retrains the allocation logic using only prior data, selects a constrained 10-stock portfolio, and records the next-day performance. The result is an iterative trading model rather than a one-time static backtest.
@@ -100,7 +104,8 @@ Workflow steps:
 
 GitHub cron uses UTC. The current schedule is `45 19 * * 1-5`, which equals 3:45 PM Eastern during daylight saving time. When daylight saving time ends, the workflow should be changed to `45 20 * * 1-5` to keep the same Eastern time.
 
-## Repository Contents
+<details>
+<summary><strong>Repository Contents</strong></summary>
 
 ```text
 .
@@ -131,6 +136,8 @@ GitHub cron uses UTC. The current schedule is `45 19 * * 1-5`, which equals 3:45
 +-- requirements.txt
 +-- README.md
 ```
+
+</details>
 
 ## Reproducing the Project
 
