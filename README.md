@@ -1,90 +1,101 @@
-# Active Portfolio Optimization with Integer Constraints
+# S&P 500 Portfolio Optimizer
 
-This project builds and evaluates a daily-rebalanced portfolio optimizer using Modern Portfolio Theory, integer selection variables, sector constraints, moving-average signals, and an XGBoost return-prediction overlay.
+[![Daily Portfolio Refresh](https://github.com/areebirfan62/stockportfolioanalysis/actions/workflows/daily_portfolio_refresh.yml/badge.svg)](https://github.com/areebirfan62/stockportfolioanalysis/actions/workflows/daily_portfolio_refresh.yml)
 
-The model is designed to answer a practical trading question:
+This project builds a daily active portfolio allocation system for OPIM 5641 Business Decision Modeling. The model uses Modern Portfolio Theory, integer selection variables, sector diversification rules, moving-average signals, and an XGBoost overlay to decide which 10 stocks to hold and how much capital to allocate to each position.
 
-> Given a real stock universe, which 10 stocks should be held today, how much capital should go into each one, and how does that active portfolio compare with buying and holding the S&P 500?
+[Interactive Dashboard](https://areebirfan62.github.io/stockportfolioanalysis/) | [Colab Workbook](https://colab.research.google.com/drive/1Jc1ZjkHwNA_sHCkSf6gUSaJnZ2IuZp2w#scrollTo=part0_header) | [Latest Summary](reports/latest_summary.md) | [Model Card](docs/MODEL_CARD.md)
+
+## Executive Summary
+
+The portfolio is evaluated as a forward test beginning on April 21, 2026. Each trading day, the workbook refreshes market data, retrains the allocation logic using only prior data, selects a constrained 10-stock portfolio, and records the next-day performance. The result is an iterative trading model rather than a one-time static backtest.
 
 ## Current Forward-Test Snapshot
 
-Latest generated date: **2026-04-28**
+Latest generated date: **2026-05-01**
 
 | Metric | Value |
 |---|---:|
 | Starting wealth | $100,000 |
-| Latest portfolio value | $103,234.14 |
-| Wealth gain | $3,234.14 |
-| Cumulative return | 3.39% |
+| Latest portfolio value | $107,234.71 |
+| Wealth gain | $7,234.71 |
+| Cumulative return | 7.41% |
+| Average daily return | 0.78% |
 | Holdings | 10 stocks |
 | Sector rule | 2 stocks from each of 5 sectors |
 | Weight bounds | 5% minimum, 50% maximum per selected stock |
 
-## Portfolio Dashboard
+## Latest Portfolio Allocation
 
-![Final Dashboard](reports/final_dashboard.png)
+| Stock | Sector | Weight | Holding Value |
+|---|---|---:|---:|
+| TRGP | Energy | 30.00% | $32,174.37 |
+| MO | ConsumerStaples | 20.19% | $21,648.57 |
+| AVGO | Technology | 14.81% | $15,879.62 |
+| WMB | Energy | 5.00% | $5,361.74 |
+| KO | ConsumerStaples | 5.00% | $5,361.74 |
+| GOOGL | Technology | 5.00% | $5,361.74 |
+| MS | Financials | 5.00% | $5,361.74 |
+| JNJ | Healthcare | 5.00% | $5,361.74 |
+| CME | Financials | 5.00% | $5,361.74 |
+| CVS | Healthcare | 5.00% | $5,361.74 |
 
-## Latest Holdings
+## Interactive Dashboard
 
-The latest daily holdings are stored in [`data/latest_portfolio_holdings.csv`](data/latest_portfolio_holdings.csv).
+The project dashboard is published from `docs/index.html` through GitHub Pages. It refreshes from the same CSV outputs produced by the workbook and includes:
 
-| Stock | Sector | Weight |
-|---|---|---:|
-| MO | ConsumerStaples | 29.94% |
-| TRGP | Energy | 25.13% |
-| AVGO | Technology | 8.97% |
-| MS | Financials | 5.96% |
-| WMT | ConsumerStaples | 5.00% |
-| MU | Technology | 5.00% |
-| JNJ | Healthcare | 5.00% |
-| BKR | Energy | 5.00% |
-| JPM | Financials | 5.00% |
-| AMGN | Healthcare | 5.00% |
+- Forward-test portfolio value
+- Daily portfolio returns
+- Latest 10-stock allocation
+- Sector mix pie chart
+- Stock-level return contribution
+- Allocation history by stock
+- Current holdings table
 
-## Key Visuals to Review
+Static notebook figures are retained in `reports/` as supporting evidence from the modeling workflow.
 
-### 1. Final Performance Dashboard
+## Modeling Approach
 
-Shows portfolio NAV, rolling Sharpe, drawdown, and allocation heatmap. This should be the first image in the README because it communicates model performance and risk behavior quickly.
+The optimizer combines continuous allocation decisions with binary stock-selection decisions:
 
-![Final Dashboard](reports/final_dashboard.png)
+| Component | Role |
+|---|---|
+| `X[k]` | Portfolio weight assigned to stock `k` |
+| `Y[k]` | Binary decision for whether stock `k` is selected |
+| Budget constraint | All portfolio weights sum to 100% |
+| Linking constraints | Selected stocks must receive at least 5% and no more than 50% |
+| Cardinality constraint | Exactly 10 stocks are selected each day |
+| Sector constraint | Exactly 2 stocks are selected from each of 5 sectors |
+| Objective | Select the maximum Sharpe allocation along the efficient frontier |
 
-### 2. Integer MPT Optimizer Results
+The forward-test loop uses a sliding historical window so that each allocation is trained only on information available before the tested trading day.
 
-Shows the efficient frontier, sector allocation, and stock-level weights for the constrained optimizer.
+## Model Comparison
 
-![Model 1 Results](reports/model1_results.png)
+The notebook includes three complementary modeling layers:
 
-### 3. Moving-Average Signal Dashboard
+| Model | Purpose |
+|---|---|
+| Integer MPT optimizer | Core constrained allocation engine |
+| Moving-average signal screen | Technical momentum comparison and signal validation |
+| XGBoost return overlay | Experimental machine-learning estimate of next-day returns |
 
-Shows the technical signal screen used to filter or evaluate stocks before optimization.
+The final dashboard emphasizes the daily forward-test portfolio because it is the most direct evidence of how the trading process behaves over time.
 
-![Moving Average Signals](reports/ma_signals.png)
+## Automation
 
-### 4. XGBoost Feature and Prediction Analysis
+GitHub Actions runs the refresh workflow Monday through Friday at **3:45 PM Eastern during daylight saving time**.
 
-Shows which engineered features mattered most and compares model-predicted returns against historical means.
+Workflow steps:
 
-![XGBoost Analysis](reports/xgboost_analysis.png)
+1. Execute the portfolio notebook.
+2. Refresh Yahoo Finance data.
+3. Rebuild the forward-test allocations.
+4. Validate the hard portfolio constraints.
+5. Regenerate summary tables, charts, and the interactive dashboard.
+6. Commit the updated outputs back to the repository.
 
-### 5. Womack Foundation Model
-
-Included as the classroom foundation for the integer/nonlinear optimization idea.
-
-![Womack Frontier](reports/womack_frontier.png)
-
-## Model Design
-
-The main optimizer uses:
-
-- Continuous allocation variables `X[k]`
-- Binary selection variables `Y[k]`
-- Budget constraint: all weights sum to 1
-- Linking constraints: selected stocks must receive between 5% and 50%
-- Cardinality constraint: exactly 10 selected stocks
-- Sector constraint: exactly 2 stocks from each of 5 sectors
-- Efficient-frontier sweep: automatically selects the maximum Sharpe point
-- Daily forward test starting on 2026-04-21
+GitHub cron uses UTC. The current schedule is `45 19 * * 1-5`, which equals 3:45 PM Eastern during daylight saving time. When daylight saving time ends, the workflow should be changed to `45 20 * * 1-5` to keep the same Eastern time.
 
 ## Repository Contents
 
@@ -95,8 +106,9 @@ The main optimizer uses:
 |   +-- portfolio_daily_summary.csv
 |   +-- portfolio_forward_log.csv
 +-- docs/
-|   +-- GITHUB_POSTING_CHECKLIST.md
+|   +-- index.html
 |   +-- MODEL_CARD.md
+|   +-- PROJECT_GUIDE.md
 +-- reports/
 |   +-- final_dashboard.png
 |   +-- latest_summary.md
@@ -106,8 +118,9 @@ The main optimizer uses:
 |   +-- xgboost_analysis.png
 +-- notebooks/
 |   +-- BDM_final_portfolio_notebook.ipynb
-|   +-- README.md
+|   +-- BDM_final_portfolio_notebook_executed.ipynb
 +-- scripts/
+|   +-- build_dashboard.py
 |   +-- collect_outputs.py
 |   +-- render_latest_summary.py
 |   +-- validate_outputs.py
@@ -116,34 +129,19 @@ The main optimizer uses:
 +-- README.md
 ```
 
-## Daily Automation
+## Reproducing the Project
 
-This repository is designed to refresh automatically with GitHub Actions:
+To refresh the project in Colab, open the workbook and run from the real-data pipeline section through the final reporting section. To run the repository automation locally:
 
-- Schedule: Monday-Friday at **3:45 PM Eastern during daylight saving time**
-- GitHub cron: `45 19 * * 1-5`
-- Manual run: GitHub repo -> **Actions** -> **Daily Portfolio Refresh** -> **Run workflow**
-
-The workflow executes the notebook, refreshes Yahoo Finance data, regenerates dashboards/CSVs, validates the hard constraints, and commits updated outputs back to the repository.
-
-Important timing note: GitHub Actions cron uses UTC. `19:45 UTC` equals `3:45 PM ET` during daylight saving time. After daylight saving time ends, change the cron to `45 20 * * 1-5` if you still want exactly 3:45 PM Eastern.
-
-## How to Refresh Results Locally
-
-In Colab, run from **Part 2: Real S&P 500 Data Pipeline** onward. That refreshes Yahoo Finance prices, reruns the models, updates the forward test, and regenerates the output CSVs and dashboard images.
-
-## Next Professional Additions
-
-The strongest next upgrades for a technical GitHub audience are:
-
-- Convert the notebook into a reproducible Python pipeline under `src/`
-- Add a GitHub Actions workflow that refreshes results daily after market close
-- Publish a lightweight Streamlit dashboard or GitHub Pages report
-- Add transaction cost/slippage assumptions
-- Add risk limits such as max drawdown, volatility ceiling, and turnover cap
-- Add unit tests for constraints and allocation validation
-- Add a model card and data card explaining assumptions, limitations, and data sources
+```bash
+pip install -r requirements.txt
+jupyter nbconvert --to notebook --execute notebooks/BDM_final_portfolio_notebook.ipynb --output BDM_final_portfolio_notebook_executed.ipynb --output-dir notebooks
+python scripts/collect_outputs.py
+python scripts/validate_outputs.py
+python scripts/render_latest_summary.py
+python scripts/build_dashboard.py
+```
 
 ## Disclaimer
 
-This project is for educational and modeling purposes only. It is not financial advice, and past performance does not guarantee future results.
+This project is for academic modeling and presentation purposes only. It is not financial advice, and historical or forward-tested performance does not guarantee future results.

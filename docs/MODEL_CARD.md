@@ -46,6 +46,10 @@ The notebook validates every allocation window for:
 
 Both Model 1 and Model 2 passed these hard constraints in the latest run.
 
+## Reporting
+
+The repository publishes an interactive dashboard from `docs/index.html`. The dashboard is generated from the latest CSV outputs and summarizes portfolio value, daily returns, sector allocation, stock-level weights, return contribution, and allocation history.
+
 ## Known Limitations
 
 - Yahoo Finance ticker availability can change over time.
@@ -57,6 +61,4 @@ Both Model 1 and Model 2 passed these hard constraints in the latest run.
 
 - Add transaction costs and turnover controls.
 - Add rolling out-of-sample walk-forward validation over a longer history.
-- Add a daily GitHub Actions refresh after market close.
-- Add dashboard deployment with Streamlit or GitHub Pages.
 - Add unit tests for allocation constraints and data pipeline validation.

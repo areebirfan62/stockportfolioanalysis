@@ -10,6 +10,9 @@ on:
 permissions:
   contents: write
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   refresh:
     runs-on: ubuntu-latest
@@ -50,11 +53,14 @@ jobs:
       - name: Render latest summary
         run: python scripts/render_latest_summary.py
 
+      - name: Build interactive dashboard
+        run: python scripts/build_dashboard.py
+
       - name: Commit refreshed portfolio outputs
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data reports notebooks/BDM_final_portfolio_notebook_executed.ipynb
+          git add data docs reports notebooks/BDM_final_portfolio_notebook_executed.ipynb
           if git diff --cached --quiet; then
             echo "No portfolio output changes to commit."
           else
