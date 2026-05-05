@@ -3,6 +3,7 @@ import shutil
 
 
 ROOT = Path(__file__).resolve().parents[1]
+NOTEBOOKS = ROOT / "notebooks"
 REPORTS = ROOT / "reports"
 DATA = ROOT / "data"
 
@@ -25,15 +26,25 @@ DATA_FILES = [
 
 
 def move_if_exists(filename: str, target_dir: Path) -> None:
-    src = ROOT / filename
     dest = target_dir / filename
-    if src.exists():
-        shutil.move(str(src), str(dest))
-        print(f"Moved {filename} -> {target_dir.relative_to(ROOT)}")
-    elif dest.exists():
-        print(f"Already present: {dest.relative_to(ROOT)}")
-    else:
-        raise FileNotFoundError(f"Expected output file not found: {filename}")
+    candidates = [
+        ROOT / filename,
+        NOTEBOOKS / filename,
+    ]
+
+    for src in candidates:
+        if src.exists():
+            if src.resolve() == dest.resolve():
+                print(f"Already present: {dest.relative_to(ROOT)}")
+                return
+            shutil.move(str(src), str(dest))
+            print(f"Moved {src.relative_to(ROOT)} -> {dest.relative_to(ROOT)}")
+            return
+
+    raise FileNotFoundError(
+        f"Expected fresh notebook output file not found: {filename}. "
+        f"Checked: {', '.join(str(p.relative_to(ROOT)) for p in candidates)}"
+    )
 
 
 for name in REPORT_FILES:
