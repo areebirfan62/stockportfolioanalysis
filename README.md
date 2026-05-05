@@ -10,8 +10,6 @@ This project builds a daily active portfolio allocation system for OPIM 5641 Bus
 
 The main results are published in the interactive dashboard, not in the repository file list. Use the dashboard link above to review the latest portfolio value, summary statistics, daily returns, sector allocation, and current holdings. If GitHub Pages is still being configured, the same dashboard source is stored in `docs/index.html`.
 
-If the dashboard link returns a GitHub Pages `404`, open the repository settings and set **Pages** to deploy from **GitHub Actions**. The included `Deploy GitHub Pages` workflow publishes the `docs/` folder as the live dashboard site.
-
 ## Executive Summary
 
 The portfolio is evaluated as a forward test beginning on April 21, 2026. Each trading day, the workbook refreshes market data, retrains the allocation logic using only prior data, selects a constrained 10-stock portfolio, and records the next-day performance. The result is an iterative trading model rather than a one-time static backtest.
