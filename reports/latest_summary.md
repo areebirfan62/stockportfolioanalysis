@@ -17,7 +17,7 @@ Latest refresh date: **2026-05-05**
 | Stock | Sector | Weight | Holding Value |
 | --- | --- | --- | --- |
 | TRGP | Energy | 30.67% | $33,370.66 |
-| MO | ConsumerStaples | 19.03% | $20,704.57 |
+| MO | ConsumerStaples | 19.03% | $20,704.58 |
 | AVGO | Technology | 12.17% | $13,243.32 |
 | MU | Technology | 8.13% | $8,850.32 |
 | WMB | Energy | 5.00% | $5,440.63 |
