@@ -7,6 +7,10 @@ on:
     - cron: "45 19 * * 1-5"
   workflow_dispatch:
 
+concurrency:
+  group: daily-portfolio-refresh
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
@@ -21,6 +25,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -60,10 +66,11 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull --rebase --autostash origin main
           git add data docs reports notebooks/BDM_final_portfolio_notebook_executed.ipynb
           if git diff --cached --quiet; then
             echo "No portfolio output changes to commit."
           else
             git commit -m "Daily portfolio refresh"
-            git push
+            git push origin HEAD:main
           fi
