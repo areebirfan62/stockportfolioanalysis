@@ -1,13 +1,13 @@
 # Latest Portfolio Summary
 
-Latest refresh date: **2026-05-06**
+Latest refresh date: **2026-05-07**
 
 | Metric | Value |
 |---|---:|
-| Portfolio value | $107,739.57 |
-| Wealth gain | $7,739.57 |
-| Cumulative return | 7.91% |
-| Average daily return | 0.63% |
+| Portfolio value | $106,853.97 |
+| Wealth gain | $6,853.97 |
+| Cumulative return | 7.03% |
+| Average daily return | 0.52% |
 | Holdings | 10 |
 | Sector rule | 2 stocks from each of 5 sectors |
 | Weight bounds | 5% minimum, 50% maximum |
@@ -16,16 +16,16 @@ Latest refresh date: **2026-05-06**
 
 | Stock | Sector | Weight | Holding Value |
 | --- | --- | --- | --- |
-| TRGP | Energy | 32.71% | $35,237.87 |
-| MO | ConsumerStaples | 13.99% | $15,075.75 |
-| AVGO | Technology | 11.79% | $12,697.39 |
-| MU | Technology | 11.52% | $12,406.69 |
-| WMB | Energy | 5.00% | $5,386.98 |
-| MS | Financials | 5.00% | $5,386.98 |
-| WMT | ConsumerStaples | 5.00% | $5,386.98 |
-| GS | Financials | 5.00% | $5,386.98 |
-| CVS | Healthcare | 5.00% | $5,386.98 |
-| ABBV | Healthcare | 5.00% | $5,386.98 |
+| TRGP | Energy | 22.38% | $23,915.61 |
+| MU | Technology | 19.74% | $21,088.79 |
+| MO | ConsumerStaples | 15.97% | $17,068.16 |
+| CVS | Healthcare | 11.91% | $12,725.21 |
+| GOOGL | Technology | 5.00% | $5,342.70 |
+| MS | Financials | 5.00% | $5,342.70 |
+| WMB | Energy | 5.00% | $5,342.70 |
+| GS | Financials | 5.00% | $5,342.70 |
+| ABBV | Healthcare | 5.00% | $5,342.70 |
+| KO | ConsumerStaples | 5.00% | $5,342.70 |
 
 ## Dashboard
 
