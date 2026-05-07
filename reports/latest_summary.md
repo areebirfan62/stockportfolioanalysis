@@ -21,11 +21,11 @@ Latest refresh date: **2026-05-07**
 | MO | ConsumerStaples | 15.97% | $17,068.16 |
 | CVS | Healthcare | 11.91% | $12,725.21 |
 | GOOGL | Technology | 5.00% | $5,342.70 |
-| MS | Financials | 5.00% | $5,342.70 |
+| KO | ConsumerStaples | 5.00% | $5,342.70 |
 | WMB | Energy | 5.00% | $5,342.70 |
 | GS | Financials | 5.00% | $5,342.70 |
+| MS | Financials | 5.00% | $5,342.70 |
 | ABBV | Healthcare | 5.00% | $5,342.70 |
-| KO | ConsumerStaples | 5.00% | $5,342.70 |
 
 ## Dashboard
 
