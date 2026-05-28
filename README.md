@@ -18,15 +18,15 @@ The modeling workflow is powered by Google Colab for transparent notebook execut
 
 ## Current Forward-Test Snapshot
 
-Latest generated date: **2026-05-27**
+Latest generated date: **2026-05-28**
 
 | Metric | Value |
 |---|---:|
 | Starting wealth | $100,000 |
-| Latest portfolio value | $123,119.58 |
-| Wealth gain | $23,119.58 |
-| Cumulative return | 23.44% |
-| Average daily return | 0.81% |
+| Latest portfolio value | $123,287.57 |
+| Wealth gain | $23,287.57 |
+| Cumulative return | 23.60% |
+| Average daily return | 0.79% |
 | Holdings | 10 stocks |
 | Sector rule | 2 stocks from each of 5 sectors |
 | Weight bounds | 5% minimum, 50% maximum per selected stock |
@@ -35,16 +35,16 @@ Latest generated date: **2026-05-27**
 
 | Stock | Sector | Weight | Holding Value |
 | --- | --- | --- | --- |
-| TRGP | Energy | 35.80% | $44,075.50 |
-| INTC | Technology | 13.96% | $17,186.29 |
-| MS | Financials | 12.48% | $15,360.05 |
-| MU | Technology | 7.77% | $9,561.87 |
-| CVS | Healthcare | 5.00% | $6,155.98 |
-| MO | ConsumerStaples | 5.00% | $6,155.98 |
-| WMB | Energy | 5.00% | $6,155.98 |
-| GS | Financials | 5.00% | $6,155.98 |
-| PM | ConsumerStaples | 5.00% | $6,155.98 |
-| LLY | Healthcare | 5.00% | $6,155.98 |
+| TRGP | Energy | 33.11% | $40,824.91 |
+| INTC | Technology | 13.13% | $16,182.28 |
+| MS | Financials | 12.17% | $15,002.75 |
+| MU | Technology | 10.13% | $12,488.25 |
+| MO | ConsumerStaples | 6.46% | $7,967.49 |
+| BKR | Energy | 5.00% | $6,164.38 |
+| GS | Financials | 5.00% | $6,164.38 |
+| CVS | Healthcare | 5.00% | $6,164.38 |
+| KO | ConsumerStaples | 5.00% | $6,164.38 |
+| LLY | Healthcare | 5.00% | $6,164.38 |
 
 ## Interactive Dashboard
 
