@@ -18,15 +18,15 @@ The modeling workflow is powered by Google Colab for transparent notebook execut
 
 ## Current Forward-Test Snapshot
 
-Latest generated date: **2026-06-29**
+Latest generated date: **2026-06-30**
 
 | Metric | Value |
 |---|---:|
 | Starting wealth | $100,000 |
-| Latest portfolio value | $123,915.75 |
-| Wealth gain | $23,915.75 |
-| Cumulative return | 23.90% |
-| Average daily return | 0.45% |
+| Latest portfolio value | $123,217.91 |
+| Wealth gain | $23,217.91 |
+| Cumulative return | 23.20% |
+| Average daily return | 0.43% |
 | Holdings | 10 stocks |
 | Sector rule | 2 stocks from each of 5 sectors |
 | Weight bounds | 5% minimum, 50% maximum per selected stock |
@@ -35,16 +35,16 @@ Latest generated date: **2026-06-29**
 
 | Stock | Sector | Weight | Holding Value |
 | --- | --- | --- | --- |
-| KO | ConsumerStaples | 17.08% | $21,163.46 |
-| PNC | Financials | 15.92% | $19,732.59 |
-| CVS | Healthcare | 15.59% | $19,319.52 |
-| MS | Financials | 12.23% | $15,152.52 |
-| MO | ConsumerStaples | 10.06% | $12,465.09 |
-| MU | Technology | 8.29% | $10,278.27 |
-| LLY | Healthcare | 5.82% | $7,216.93 |
-| TRGP | Energy | 5.00% | $6,195.79 |
-| WMB | Energy | 5.00% | $6,195.79 |
-| INTC | Technology | 5.00% | $6,195.79 |
+| PNC | Financials | 20.41% | $25,144.37 |
+| CVS | Healthcare | 18.01% | $22,191.26 |
+| MO | ConsumerStaples | 11.03% | $13,590.12 |
+| PM | ConsumerStaples | 10.23% | $12,609.36 |
+| MU | Technology | 9.52% | $11,725.95 |
+| MS | Financials | 8.73% | $10,751.66 |
+| LLY | Healthcare | 7.03% | $8,657.25 |
+| INTC | Technology | 5.05% | $6,226.15 |
+| VLO | Energy | 5.00% | $6,160.90 |
+| TRGP | Energy | 5.00% | $6,160.90 |
 
 ## Interactive Dashboard
 
