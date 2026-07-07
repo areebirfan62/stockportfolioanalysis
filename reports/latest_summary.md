@@ -1,13 +1,13 @@
 # Latest Portfolio Summary
 
-Latest refresh date: **2026-07-06**
+Latest refresh date: **2026-07-07**
 
 | Metric | Value |
 |---|---:|
-| Portfolio value | $123,157.68 |
-| Wealth gain | $23,157.68 |
-| Cumulative return | 23.26% |
-| Average daily return | 0.41% |
+| Portfolio value | $123,187.95 |
+| Wealth gain | $23,187.95 |
+| Cumulative return | 23.29% |
+| Average daily return | 0.40% |
 | Holdings | 10 |
 | Sector rule | 2 stocks from each of 5 sectors |
 | Weight bounds | 5% minimum, 50% maximum |
@@ -16,16 +16,16 @@ Latest refresh date: **2026-07-06**
 
 | Stock | Sector | Weight | Holding Value |
 | --- | --- | --- | --- |
-| TRV | Financials | 36.42% | $44,852.07 |
-| MS | Financials | 14.13% | $17,401.78 |
-| CVS | Healthcare | 10.54% | $12,984.06 |
-| VLO | Energy | 7.50% | $9,236.47 |
-| KO | ConsumerStaples | 5.85% | $7,200.63 |
-| MU | Technology | 5.56% | $6,851.13 |
-| TRGP | Energy | 5.00% | $6,157.88 |
-| ABBV | Healthcare | 5.00% | $6,157.88 |
-| INTC | Technology | 5.00% | $6,157.88 |
-| PM | ConsumerStaples | 5.00% | $6,157.88 |
+| KO | ConsumerStaples | 20.55% | $25,309.73 |
+| MS | Financials | 18.48% | $22,760.34 |
+| PNC | Financials | 18.39% | $22,654.49 |
+| PM | ConsumerStaples | 9.02% | $11,107.68 |
+| CVS | Healthcare | 7.58% | $9,336.99 |
+| VLO | Energy | 5.99% | $7,381.12 |
+| MU | Technology | 5.00% | $6,159.40 |
+| INTC | Technology | 5.00% | $6,159.40 |
+| TRGP | Energy | 5.00% | $6,159.40 |
+| ABBV | Healthcare | 5.00% | $6,159.40 |
 
 ## Dashboard
 
