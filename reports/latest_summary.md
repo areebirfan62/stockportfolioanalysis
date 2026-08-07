@@ -1,12 +1,12 @@
 # Latest Portfolio Summary
 
-Latest refresh date: **2026-08-05**
+Latest refresh date: **2026-08-06**
 
 | Metric | Value |
 |---|---:|
-| Portfolio value | $128,053.69 |
-| Wealth gain | $28,053.69 |
-| Cumulative return | 28.16% |
+| Portfolio value | $128,489.82 |
+| Wealth gain | $28,489.82 |
+| Cumulative return | 28.60% |
 | Average daily return | 0.34% |
 | Holdings | 10 |
 | Sector rule | 2 stocks from each of 5 sectors |
@@ -16,16 +16,16 @@ Latest refresh date: **2026-08-05**
 
 | Stock | Sector | Weight | Holding Value |
 | --- | --- | --- | --- |
-| TRV | Financials | 21.94% | $28,094.12 |
-| KO | ConsumerStaples | 19.43% | $24,885.93 |
-| JPM | Financials | 18.65% | $23,886.11 |
-| VLO | Energy | 9.97% | $12,771.43 |
-| TRGP | Energy | 5.00% | $6,402.68 |
-| PM | ConsumerStaples | 5.00% | $6,402.68 |
-| MU | Technology | 5.00% | $6,402.68 |
-| LRCX | Technology | 5.00% | $6,402.68 |
-| CVS | Healthcare | 5.00% | $6,402.68 |
-| ABBV | Healthcare | 5.00% | $6,402.68 |
+| TRV | Financials | 22.71% | $29,185.89 |
+| JPM | Financials | 19.98% | $25,670.22 |
+| KO | ConsumerStaples | 12.45% | $15,993.41 |
+| VLO | Energy | 10.99% | $14,116.92 |
+| LLY | Healthcare | 8.87% | $11,400.92 |
+| MU | Technology | 5.00% | $6,424.49 |
+| LRCX | Technology | 5.00% | $6,424.49 |
+| JNJ | Healthcare | 5.00% | $6,424.49 |
+| TRGP | Energy | 5.00% | $6,424.49 |
+| PM | ConsumerStaples | 5.00% | $6,424.49 |
 
 ## Dashboard
 
