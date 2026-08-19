@@ -18,15 +18,15 @@ The modeling workflow is powered by Google Colab for transparent notebook execut
 
 ## Current Forward-Test Snapshot
 
-Latest generated date: **2026-08-18**
+Latest generated date: **2026-08-19**
 
 | Metric | Value |
 |---|---:|
 | Starting wealth | $100,000 |
-| Latest portfolio value | $134,203.45 |
-| Wealth gain | $34,203.45 |
-| Cumulative return | 34.40% |
-| Average daily return | 0.36% |
+| Latest portfolio value | $133,609.63 |
+| Wealth gain | $33,609.63 |
+| Cumulative return | 33.80% |
+| Average daily return | 0.35% |
 | Holdings | 10 stocks |
 | Sector rule | 2 stocks from each of 5 sectors |
 | Weight bounds | 5% minimum, 50% maximum per selected stock |
@@ -35,16 +35,16 @@ Latest generated date: **2026-08-18**
 
 | Stock | Sector | Weight | Holding Value |
 | --- | --- | --- | --- |
-| JPM | Financials | 18.76% | $25,177.88 |
-| TRV | Financials | 18.47% | $24,790.15 |
-| KO | ConsumerStaples | 14.98% | $20,108.96 |
-| MPC | Energy | 12.41% | $16,652.36 |
-| AMGN | Healthcare | 10.37% | $13,923.22 |
-| VLO | Energy | 5.00% | $6,710.17 |
-| PM | ConsumerStaples | 5.00% | $6,710.17 |
-| MU | Technology | 5.00% | $6,710.17 |
-| LRCX | Technology | 5.00% | $6,710.17 |
-| ABBV | Healthcare | 5.00% | $6,710.17 |
+| TRV | Financials | 19.49% | $26,045.10 |
+| MPC | Energy | 17.33% | $23,154.44 |
+| JPM | Financials | 16.42% | $21,944.41 |
+| KO | ConsumerStaples | 11.70% | $15,637.90 |
+| AMGN | Healthcare | 10.05% | $13,425.37 |
+| PM | ConsumerStaples | 5.00% | $6,680.48 |
+| ABBV | Healthcare | 5.00% | $6,680.48 |
+| VLO | Energy | 5.00% | $6,680.48 |
+| LRCX | Technology | 5.00% | $6,680.48 |
+| MU | Technology | 5.00% | $6,680.48 |
 
 ## Interactive Dashboard
 
