@@ -1,12 +1,12 @@
 # Latest Portfolio Summary
 
-Latest refresh date: **2026-08-19**
+Latest refresh date: **2026-08-20**
 
 | Metric | Value |
 |---|---:|
-| Portfolio value | $133,609.63 |
-| Wealth gain | $33,609.63 |
-| Cumulative return | 33.80% |
+| Portfolio value | $134,237.03 |
+| Wealth gain | $34,237.03 |
+| Cumulative return | 34.28% |
 | Average daily return | 0.35% |
 | Holdings | 10 |
 | Sector rule | 2 stocks from each of 5 sectors |
@@ -16,16 +16,16 @@ Latest refresh date: **2026-08-19**
 
 | Stock | Sector | Weight | Holding Value |
 | --- | --- | --- | --- |
-| TRV | Financials | 19.49% | $26,045.10 |
-| MPC | Energy | 17.33% | $23,154.44 |
-| JPM | Financials | 16.42% | $21,944.41 |
-| KO | ConsumerStaples | 11.70% | $15,637.90 |
-| AMGN | Healthcare | 10.05% | $13,425.37 |
-| PM | ConsumerStaples | 5.00% | $6,680.48 |
-| ABBV | Healthcare | 5.00% | $6,680.48 |
-| VLO | Energy | 5.00% | $6,680.48 |
-| LRCX | Technology | 5.00% | $6,680.48 |
-| MU | Technology | 5.00% | $6,680.48 |
+| SCHW | Financials | 29.09% | $39,048.39 |
+| TRV | Financials | 14.52% | $19,492.20 |
+| AMGN | Healthcare | 10.98% | $14,736.21 |
+| MPC | Energy | 10.55% | $14,161.84 |
+| KO | ConsumerStaples | 9.86% | $13,239.13 |
+| LRCX | Technology | 5.00% | $6,711.85 |
+| PM | ConsumerStaples | 5.00% | $6,711.85 |
+| MU | Technology | 5.00% | $6,711.85 |
+| VLO | Energy | 5.00% | $6,711.85 |
+| ABBV | Healthcare | 5.00% | $6,711.85 |
 
 ## Dashboard
 
