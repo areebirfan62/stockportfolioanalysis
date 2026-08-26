@@ -18,15 +18,15 @@ The modeling workflow is powered by Google Colab for transparent notebook execut
 
 ## Current Forward-Test Snapshot
 
-Latest generated date: **2026-08-25**
+Latest generated date: **2026-08-26**
 
 | Metric | Value |
 |---|---:|
 | Starting wealth | $100,000 |
-| Latest portfolio value | $135,747.95 |
-| Wealth gain | $35,747.95 |
-| Cumulative return | 35.79% |
-| Average daily return | 0.35% |
+| Latest portfolio value | $134,692.88 |
+| Wealth gain | $34,692.88 |
+| Cumulative return | 34.74% |
+| Average daily return | 0.34% |
 | Holdings | 10 stocks |
 | Sector rule | 2 stocks from each of 5 sectors |
 | Weight bounds | 5% minimum, 50% maximum per selected stock |
@@ -35,16 +35,16 @@ Latest generated date: **2026-08-25**
 
 | Stock | Sector | Weight | Holding Value |
 | --- | --- | --- | --- |
-| SCHW | Financials | 30.67% | $41,627.89 |
-| KO | ConsumerStaples | 16.55% | $22,472.09 |
-| TRV | Financials | 15.30% | $20,769.62 |
-| PM | ConsumerStaples | 7.11% | $9,654.05 |
-| MPC | Energy | 5.37% | $7,287.30 |
-| VLO | Energy | 5.00% | $6,787.40 |
-| AMGN | Healthcare | 5.00% | $6,787.40 |
-| MU | Technology | 5.00% | $6,787.40 |
-| LRCX | Technology | 5.00% | $6,787.40 |
-| ABBV | Healthcare | 5.00% | $6,787.40 |
+| SCHW | Financials | 30.70% | $41,357.18 |
+| TRV | Financials | 16.58% | $22,331.65 |
+| KO | ConsumerStaples | 14.48% | $19,509.98 |
+| MPC | Energy | 7.35% | $9,894.96 |
+| AMGN | Healthcare | 5.88% | $7,925.89 |
+| MU | Technology | 5.00% | $6,734.64 |
+| JNJ | Healthcare | 5.00% | $6,734.64 |
+| LRCX | Technology | 5.00% | $6,734.64 |
+| VLO | Energy | 5.00% | $6,734.64 |
+| PM | ConsumerStaples | 5.00% | $6,734.64 |
 
 ## Interactive Dashboard
 
