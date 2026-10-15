@@ -18,15 +18,15 @@ The modeling workflow is powered by Google Colab for transparent notebook execut
 
 ## Current Forward-Test Snapshot
 
-Latest generated date: **2026-10-14**
+Latest generated date: **2026-10-15**
 
 | Metric | Value |
 |---|---:|
 | Starting wealth | $100,000 |
-| Latest portfolio value | $149,283.76 |
-| Wealth gain | $49,283.76 |
-| Cumulative return | 49.01% |
-| Average daily return | 0.33% |
+| Latest portfolio value | $148,252.34 |
+| Wealth gain | $48,252.34 |
+| Cumulative return | 47.68% |
+| Average daily return | 0.32% |
 | Holdings | 10 stocks |
 | Sector rule | 2 stocks from each of 5 sectors |
 | Weight bounds | 5% minimum, 50% maximum per selected stock |
@@ -35,16 +35,16 @@ Latest generated date: **2026-10-14**
 
 | Stock | Sector | Weight | Holding Value |
 | --- | --- | --- | --- |
-| MPC | Energy | 20.26% | $30,237.60 |
-| KO | ConsumerStaples | 16.19% | $24,164.06 |
-| PSX | Energy | 15.92% | $23,767.53 |
-| PM | ConsumerStaples | 11.59% | $17,306.30 |
-| MRK | Healthcare | 11.04% | $16,487.33 |
-| ABBV | Healthcare | 5.00% | $7,464.19 |
-| MU | Technology | 5.00% | $7,464.19 |
-| INTC | Technology | 5.00% | $7,464.19 |
-| TRV | Financials | 5.00% | $7,464.19 |
-| JPM | Financials | 5.00% | $7,464.19 |
+| MPC | Energy | 17.63% | $26,130.01 |
+| PSX | Energy | 16.66% | $24,705.49 |
+| PM | ConsumerStaples | 13.89% | $20,585.42 |
+| KO | ConsumerStaples | 13.65% | $20,234.11 |
+| ABBV | Healthcare | 12.84% | $19,035.48 |
+| MU | Technology | 5.34% | $7,911.36 |
+| TRV | Financials | 5.00% | $7,412.62 |
+| GOOGL | Technology | 5.00% | $7,412.62 |
+| JPM | Financials | 5.00% | $7,412.62 |
+| HUM | Healthcare | 5.00% | $7,412.62 |
 
 ## Interactive Dashboard
 
