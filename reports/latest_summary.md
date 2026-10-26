@@ -1,13 +1,13 @@
 # Latest Portfolio Summary
 
-Latest refresh date: **2026-10-23**
+Latest refresh date: **2026-10-26**
 
 | Metric | Value |
 |---|---:|
-| Portfolio value | $139,510.95 |
-| Wealth gain | $39,510.95 |
-| Cumulative return | 38.90% |
-| Average daily return | 0.26% |
+| Portfolio value | $141,175.23 |
+| Wealth gain | $41,175.23 |
+| Cumulative return | 40.56% |
+| Average daily return | 0.27% |
 | Holdings | 10 |
 | Sector rule | 2 stocks from each of 5 sectors |
 | Weight bounds | 5% minimum, 50% maximum |
@@ -16,16 +16,16 @@ Latest refresh date: **2026-10-23**
 
 | Stock | Sector | Weight | Holding Value |
 | --- | --- | --- | --- |
-| CME | Financials | 18.80% | $26,231.36 |
-| AMGN | Healthcare | 13.72% | $19,135.90 |
-| MPC | Energy | 13.04% | $18,186.46 |
-| PSX | Energy | 12.32% | $17,194.63 |
-| TRV | Financials | 9.61% | $13,408.09 |
-| KO | ConsumerStaples | 9.36% | $13,054.79 |
-| AMD | Technology | 8.15% | $11,373.06 |
-| MU | Technology | 5.00% | $6,975.55 |
-| ABBV | Healthcare | 5.00% | $6,975.55 |
-| WMT | ConsumerStaples | 5.00% | $6,975.55 |
+| CME | Financials | 18.33% | $25,881.22 |
+| MO | ConsumerStaples | 15.37% | $21,694.33 |
+| PSX | Energy | 12.07% | $17,037.08 |
+| MPC | Energy | 11.83% | $16,702.85 |
+| AMGN | Healthcare | 11.34% | $16,008.50 |
+| AMD | Technology | 9.64% | $13,607.76 |
+| ABBV | Healthcare | 6.42% | $9,067.21 |
+| TRV | Financials | 5.00% | $7,058.76 |
+| KO | ConsumerStaples | 5.00% | $7,058.76 |
+| MU | Technology | 5.00% | $7,058.76 |
 
 ## Dashboard
 
