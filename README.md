@@ -18,15 +18,15 @@ The modeling workflow is powered by Google Colab for transparent notebook execut
 
 ## Current Forward-Test Snapshot
 
-Latest generated date: **2026-11-05**
+Latest generated date: **2026-11-06**
 
 | Metric | Value |
 |---|---:|
 | Starting wealth | $100,000 |
-| Latest portfolio value | $135,628.22 |
-| Wealth gain | $35,628.22 |
-| Cumulative return | 35.89% |
-| Average daily return | 0.22% |
+| Latest portfolio value | $131,758.16 |
+| Wealth gain | $31,758.16 |
+| Cumulative return | 31.01% |
+| Average daily return | 0.20% |
 | Holdings | 10 stocks |
 | Sector rule | 2 stocks from each of 5 sectors |
 | Weight bounds | 5% minimum, 50% maximum per selected stock |
@@ -35,16 +35,16 @@ Latest generated date: **2026-11-05**
 
 | Stock | Sector | Weight | Holding Value |
 | --- | --- | --- | --- |
-| CME | Financials | 17.67% | $23,962.49 |
-| KO | ConsumerStaples | 14.15% | $19,186.92 |
-| AMD | Technology | 13.42% | $18,204.03 |
-| CVX | Energy | 11.30% | $15,327.10 |
-| MO | ConsumerStaples | 9.37% | $12,712.97 |
-| ABBV | Healthcare | 8.99% | $12,187.93 |
-| AAPL | Technology | 8.92% | $12,099.65 |
-| LLY | Healthcare | 6.18% | $8,384.30 |
-| TRV | Financials | 5.00% | $6,781.41 |
-| PSX | Energy | 5.00% | $6,781.41 |
+| MO | ConsumerStaples | 41.74% | $54,998.01 |
+| CME | Financials | 15.34% | $20,209.59 |
+| ABBV | Healthcare | 7.92% | $10,435.20 |
+| AMD | Technology | 5.00% | $6,587.91 |
+| PSX | Energy | 5.00% | $6,587.91 |
+| APA | Energy | 5.00% | $6,587.91 |
+| MU | Technology | 5.00% | $6,587.91 |
+| TRV | Financials | 5.00% | $6,587.91 |
+| KO | ConsumerStaples | 5.00% | $6,587.91 |
+| LLY | Healthcare | 5.00% | $6,587.91 |
 
 ## Interactive Dashboard
 
