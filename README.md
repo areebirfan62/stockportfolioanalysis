@@ -18,15 +18,15 @@ The modeling workflow is powered by Google Colab for transparent notebook execut
 
 ## Current Forward-Test Snapshot
 
-Latest generated date: **2026-11-20**
+Latest generated date: **2026-11-23**
 
 | Metric | Value |
 |---|---:|
 | Starting wealth | $100,000 |
-| Latest portfolio value | $131,204.16 |
-| Wealth gain | $31,204.16 |
-| Cumulative return | 30.40% |
-| Average daily return | 0.19% |
+| Latest portfolio value | $133,561.98 |
+| Wealth gain | $33,561.98 |
+| Cumulative return | 32.42% |
+| Average daily return | 0.20% |
 | Holdings | 10 stocks |
 | Sector rule | 2 stocks from each of 5 sectors |
 | Weight bounds | 5% minimum, 50% maximum per selected stock |
@@ -35,16 +35,16 @@ Latest generated date: **2026-11-20**
 
 | Stock | Sector | Weight | Holding Value |
 | --- | --- | --- | --- |
-| WMT | ConsumerStaples | 31.46% | $41,278.95 |
-| CB | Financials | 17.69% | $23,209.35 |
-| ABBV | Healthcare | 9.31% | $12,215.77 |
-| CME | Financials | 8.95% | $11,737.67 |
-| APA | Energy | 7.59% | $9,961.40 |
-| MPC | Energy | 5.00% | $6,560.21 |
-| AMD | Technology | 5.00% | $6,560.21 |
-| MO | ConsumerStaples | 5.00% | $6,560.21 |
-| LLY | Healthcare | 5.00% | $6,560.21 |
-| KLAC | Technology | 5.00% | $6,560.21 |
+| WMT | ConsumerStaples | 40.24% | $53,748.67 |
+| CB | Financials | 11.30% | $15,094.88 |
+| ABBV | Healthcare | 9.73% | $12,992.92 |
+| CME | Financials | 7.67% | $10,246.22 |
+| APA | Energy | 6.06% | $8,088.79 |
+| LLY | Healthcare | 5.00% | $6,678.10 |
+| MO | ConsumerStaples | 5.00% | $6,678.10 |
+| MPC | Energy | 5.00% | $6,678.10 |
+| AMD | Technology | 5.00% | $6,678.10 |
+| KLAC | Technology | 5.00% | $6,678.10 |
 
 ## Interactive Dashboard
 
